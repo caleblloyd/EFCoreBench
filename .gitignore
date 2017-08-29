@@ -1,4 +1,3 @@
-﻿/config.json
-/Migrations/*.cs
+﻿/Migrations/*.cs
 /scripts/vegeta/results.bin
 /.vscode

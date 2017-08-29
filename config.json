@@ -1,0 +1,7 @@
+{
+    "Data": {
+      "MYSQL": "server=172.17.0.1;user id=root;password=test123!;port=48100;database=efbench;Pooling=true;MaxPoolSize=50;",
+      "NPGSQL": "server=172.17.0.1;user id=postgres;password=test123!;port=48101;database=efbench;Pooling=true;MaxPoolSize=50;",
+      "SQLSERVER": "server=172.17.0.1,48102;user id=sa;password=test123!;database=efbench;Pooling=true;Max Pool Size=50;"
+    }
+}
