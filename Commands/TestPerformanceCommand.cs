@@ -60,14 +60,14 @@ namespace EFCoreBench.Commands{
             }
 
             var sleepNum = 0;
-            async Task SleepTenMilliseconds(AppDb db)
+            async Task Sleep16Ms(AppDb db)
             {
 #if MYSQL
-                await db.Database.ExecuteSqlCommandAsync("SELECT SLEEP(0.01)");
+                await db.Database.ExecuteSqlCommandAsync("SELECT SLEEP(0.016)");
 #elif NPGSQL
-                await db.Database.ExecuteSqlCommandAsync("SELECT pg_sleep(0.01)");
+                await db.Database.ExecuteSqlCommandAsync("SELECT pg_sleep(0.016)");
 #elif SQLSERVER
-                await db.Database.ExecuteSqlCommandAsync("WAITFOR DELAY '00:00:00:01'");
+                await db.Database.ExecuteSqlCommandAsync("WAITFOR DELAY '00:00:00:016'");
 #endif
                 db.Database.CloseConnection();
                 Interlocked.Increment(ref sleepNum);
@@ -90,7 +90,7 @@ namespace EFCoreBench.Commands{
                 Console.WriteLine("First Record: " + firstRecord);
             Console.WriteLine();
 
-            PerfTest(SleepTenMilliseconds, "Sleep 10ms", iterations, concurrency, ops).GetAwaiter().GetResult();
+            PerfTest(Sleep16Ms, "Sleep 16ms", iterations, concurrency, ops).GetAwaiter().GetResult();
             Console.WriteLine("Total Sleep Commands: " + sleepNum);
             Console.WriteLine();
         }
