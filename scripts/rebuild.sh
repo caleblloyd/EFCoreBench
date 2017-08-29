@@ -6,15 +6,4 @@ set -e
 rm -f Migrations/*.cs
 dotnet ef --configuration $1 database drop -f
 dotnet ef --configuration $1 migrations add initial
-
-set +e
-# add using System.Collections.Generic to the migration files
-find ./Migrations -name "*.cs" -type f | while read -r file; do
-    grep -q "using System.Collections.Generic;" $file
-    if [ $? -ne 0 ]; then
-        sed -i '1s/^/using System.Collections.Generic;\n/' $file
-    fi
-done
-
-set -e
 dotnet ef --configuration $1 database update

@@ -42,6 +42,6 @@ Results reported are fastest time of 3 test runs.  Time is in seconds, lower is 
 
 Test|MySQL|PostgreSQL|SQL Server (Linux)|SQL Server (Windows)
 -|-|-|-|-
-Insert|2.62|2.00|6.29|1.97
-Select|6.25|3.61|7.56|7.60
-Sleep|1.83|1.30|3.97|3.12
+Insert|2.43|1.94|6.02|1.97
+Select|5.28|3.68|7.05|7.60
+Sleep|2.54|1.87|4.07|3.12
