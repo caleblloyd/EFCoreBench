@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>EFCoreBench</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>EFCoreBench</PackageId>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+    <ThreadPoolMinThreads>16</ThreadPoolMinThreads>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--app packages-->
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.0" />
+    <PackageReference Include="xunit" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'MYSQL' ">
+    <DefineConstants>MYSQL</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'MYSQL' ">
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.0.0-rtm-10058" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'NPGSQL' ">
+    <DefineConstants>NPGSQL</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'NPGSQL' ">
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.0.0" />
+  </ItemGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'SQLSERVER' ">
+    <DefineConstants>SQLSERVER</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(Configuration)' == 'SQLSERVER' ">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.0" />
+  </ItemGroup>
+
+</Project>

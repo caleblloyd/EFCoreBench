@@ -1,0 +1,10 @@
+/home/caleb/Projects/caleb/EFCoreBench/obj/SQLSERVER/netcoreapp2.0/EFCoreBench.csproj.CoreCompileInputs.cache
+/home/caleb/Projects/caleb/EFCoreBench/obj/SQLSERVER/netcoreapp2.0/EFCoreBench.AssemblyInfoInputs.cache
+/home/caleb/Projects/caleb/EFCoreBench/obj/SQLSERVER/netcoreapp2.0/EFCoreBench.AssemblyInfo.cs
+/home/caleb/Projects/caleb/EFCoreBench/bin/SQLSERVER/netcoreapp2.0/EFCoreBench.deps.json
+/home/caleb/Projects/caleb/EFCoreBench/bin/SQLSERVER/netcoreapp2.0/EFCoreBench.runtimeconfig.json
+/home/caleb/Projects/caleb/EFCoreBench/bin/SQLSERVER/netcoreapp2.0/EFCoreBench.runtimeconfig.dev.json
+/home/caleb/Projects/caleb/EFCoreBench/bin/SQLSERVER/netcoreapp2.0/EFCoreBench.dll
+/home/caleb/Projects/caleb/EFCoreBench/bin/SQLSERVER/netcoreapp2.0/EFCoreBench.pdb
+/home/caleb/Projects/caleb/EFCoreBench/obj/SQLSERVER/netcoreapp2.0/EFCoreBench.dll
+/home/caleb/Projects/caleb/EFCoreBench/obj/SQLSERVER/netcoreapp2.0/EFCoreBench.pdb
