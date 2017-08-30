@@ -14,21 +14,10 @@ namespace EFCoreBench
         public static readonly string EfSchema = !string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("EF_SCHEMA"))
             ? Environment.GetEnvironmentVariable("EF_SCHEMA") : null;
 
-        public static IConfigurationRoot Config => LazyConfig.Value;
-
-        private static readonly Lazy<IConfigurationRoot> LazyConfig = new Lazy<IConfigurationRoot>(() =>
-        {
-            var pwd = new DirectoryInfo(Directory.GetCurrentDirectory());
-            var basePath = pwd.FullName;
-            if (pwd.Name.StartsWith("netcoreapp"))
-                basePath = pwd.Parent.Parent.Parent.FullName;
-
-            return new ConfigurationBuilder()
-                .SetBasePath(basePath)
-                .AddJsonFile("appsettings.json")
-                .AddJsonFile("config.json")
-                .Build();
-        });
+        public static readonly IConfigurationRoot Config = new ConfigurationBuilder()
+            .AddJsonFile("appsettings.json")
+            .AddJsonFile("config.json")
+            .Build();
         
     }
 }
